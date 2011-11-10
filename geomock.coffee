@@ -1,3 +1,9 @@
+###
+(c) 2011 Jan Monschke
+v1.0
+GeoMock is licensed under the MIT license.
+###
+
 do ->
   unless navigator? 
     window.navigator = {}

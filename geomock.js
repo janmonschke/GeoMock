@@ -1,5 +1,9 @@
 (function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  /*
+  (c) 2011 Jan Monschke
+  v1.0
+  GeoMock is licensed under the MIT license.
+  */  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   (function() {
     if (typeof navigator == "undefined" || navigator === null) {
       window.navigator = {};
