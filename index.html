@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8" />
+  <title>GeoMock - Mocking geolocation positions for the lazy people</title>
+  
+  <!-- Style -->
+  <style type="text/css">
+    body { margin: 0; padding: 0;}
+  </style>
+  
+  <!-- Scripts
+  ================================================== -->
+  <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?sensor=true">
+  </script>
+  <script type="text/javascript" src="geomock.js"></script>
+  <script type="text/javascript">
+    window.onload = function(){
+      var latlng = new google.maps.LatLng(navigator.geolocation.waypoints[0].coords.latitude, navigator.geolocation.waypoints[0].coords.longitude);
+      var myOptions = {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      
+      var map_elem = document.getElementById("map_canvas");
+      map_elem.style.height = window.innerHeight + "px";
+      
+      var map = new google.maps.Map(map_elem, myOptions);
+      var marker = new google.maps.Marker({position : latlng});
+      marker.setMap(map);
+      
+      navigator.geolocation.shouldFail = false;
+      navigator.geolocation.delay = 2000;
+      
+      var basicSuccessHandler = function(location){
+        console.log("Received a location:", location);
+        latlng = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+        map.panTo(latlng);
+        marker.setPosition(latlng);
+      };
+
+      var basicErrorHandler = function(msg){
+        console.log("Geolocation error:", msg);
+      };
+
+      navigator.geolocation.watchPosition(basicSuccessHandler, basicErrorHandler);
+      
+    };
+  </script>
+  
+</head>
+
+<body>
+  <div id="map_canvas" style="width: 100%;"></div>
+</body>
+</html>
+  
