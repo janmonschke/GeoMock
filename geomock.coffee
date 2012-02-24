@@ -48,14 +48,14 @@ do ->
       clearInterval id
     
     waypoints : [
-      {coords : {latitude : 52.5168, longitude : 13.3889 }},
-      {coords : {latitude : 52.5162, longitude : 13.3890 }},
-      {coords : {latitude : 52.5154, longitude : 13.3890 }},
-      {coords : {latitude : 52.5150, longitude : 13.3890 }}, 
-      {coords : {latitude : 52.5144, longitude : 13.3890 }}, 
-      {coords : {latitude : 52.5138, longitude : 13.3890 }}, 
-      {coords : {latitude : 52.5138, longitude : 13.3895 }}, 
-      {coords : {latitude : 52.5139, longitude : 13.3899 }}, 
-      {coords : {latitude : 52.5140, longitude : 13.3906 }}, 
-      {coords : {latitude : 52.5140, longitude : 13.3910 }}
+      {coords : {latitude : 52.5168, longitude : 13.3889, accuracy: 1500 }},
+      {coords : {latitude : 52.5162, longitude : 13.3890, accuracy: 1334 }},
+      {coords : {latitude : 52.5154, longitude : 13.3890, accuracy: 631  }},
+      {coords : {latitude : 52.5150, longitude : 13.3890, accuracy: 361  }},
+      {coords : {latitude : 52.5144, longitude : 13.3890, accuracy: 150  }},
+      {coords : {latitude : 52.5138, longitude : 13.3890, accuracy: 65   }},
+      {coords : {latitude : 52.5138, longitude : 13.3895, accuracy: 65   }},
+      {coords : {latitude : 52.5139, longitude : 13.3899, accuracy: 65   }},
+      {coords : {latitude : 52.5140, longitude : 13.3906, accuracy: 65   }},
+      {coords : {latitude : 52.5140, longitude : 13.3910, accuracy: 65   }}
     ]
