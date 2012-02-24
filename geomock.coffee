@@ -1,6 +1,6 @@
 ###
 (c) 2011 Jan Monschke
-v1.0
+v1.1
 GeoMock is licensed under the MIT license.
 ###
 
