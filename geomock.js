@@ -5,7 +5,7 @@
   GeoMock is licensed under the MIT license.
   */  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   (function() {
-    if (typeof navigator == "undefined" || navigator === null) {
+    if (typeof navigator === "undefined" || navigator === null) {
       window.navigator = {};
     }
     delete navigator.geolocation;
