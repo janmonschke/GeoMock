@@ -10,8 +10,6 @@ GeoMock can help in many ways when working with the Geolocation API:
 	- It can be used to test the way your app behaves when no signal could be retrieved
 
 ## Usage
-	It seems like Firefox does not allow the geolocation object to be overridden, so Geomock does not work in Firefox. 
-	But it's been tested in all Webkit-based browsers and Opera.`
 
 Simply include geomock.js in your website and it will replace the native Geolocation object. There is no need to change the API for tests because it mocks the Geolocation API.
 
