@@ -36,7 +36,8 @@
       
       navigator.geolocation.shouldFail = false;
       navigator.geolocation.delay = 2000;
-      
+      navigator.geolocation.repeat = false;
+
       var basicSuccessHandler = function(location){
         console.log("Received a location:", location);
         latlng = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);

@@ -21,6 +21,8 @@ The predefined delay is 1000ms. Change it like this `navigator.geolocation.delay
 
 To test failing requests, set `navigator.geolocation.shouldFail` to `true`.
 
+To run only a single iteration on the mock-locations set the `navigator.geolocation.repeat` to false.
+
 ## Example
 [http://janmonschke.com/GeoMock/example.html](http://janmonschke.com/GeoMock/example.html)
 

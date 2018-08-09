@@ -1,6 +1,6 @@
 ###
 (c) 2011 Jan Monschke
-v1.0.1
+v1.0.2
 GeoMock is licensed under the MIT license.
 ###
 
@@ -14,16 +14,19 @@ do ->
   navigator.geolocation.delay = 1000
     
   navigator.geolocation.shouldFail = false
+  navigator.geolocation.repeat = true
   navigator.geolocation.failsAt = -1
   navigator.geolocation.errorMessage = "There was an error retrieving the position!"
     
   navigator.geolocation.currentTimeout = -1
     
   navigator.geolocation.lastPosReturned = 0
-    
+
   navigator.geolocation._sanitizeLastReturned = ->
     if @lastPosReturned > @waypoints.length-1
       @lastPosReturned = 0
+      if @repeat == false
+        clearInterval @currentTimeout
     
   navigator.geolocation._geoCall = (method, success, error) ->
     if @shouldFail and error?
